@@ -27,16 +27,14 @@
 <div class="container">
     <h2 class="h1 fw-bold text-center my-4">majors</h2>
     <div class="d-flex flex-wrap gap-4 justify-content-center">
-        @foreach ($majors as $major)
-            <div class="card p-2" style="width: 18rem;">
-                <img src="{{ FileHelper::get_file_url($major->image) }}" class="card-img-top rounded-circle card-image-circle"
-                    alt="major">
-                <div class="card-body d-flex flex-column gap-1 justify-content-center">
-                    <h4 class="card-title fw-bold text-center">{{$major->title}}</h4>
-                    <a href="{{route('doctors.index')}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
-                </div>
+        <div class="card p-2" style="width: 18rem;">
+            <img src="assets/images/major.jpg" class="card-img-top rounded-circle card-image-circle"
+                alt="major">
+            <div class="card-body d-flex flex-column gap-1 justify-content-center">
+                <h4 class="card-title fw-bold text-center">Major title</h4>
+                <a href="{{route('doctors.index')}}" class="btn btn-outline-primary card-button">Browse Doctors</a>
             </div>
-        @endforeach
+        </div>
     </div>
     <h2 class="h1 fw-bold text-center my-4">doctors</h2>
     <section class="splide home__slider__doctors mb-5">
